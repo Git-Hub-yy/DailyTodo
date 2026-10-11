@@ -1,0 +1,30 @@
+# ---- 本地构建工具链（体积很大，不需要上传） ----
+/android-sdk/
+/gradle-7.5/
+/gradle-home/
+/downloads/
+
+# ---- 构建产物 / 本地输出 ----
+/dist/
+/project/build/
+/project/app/build/
+/project/.gradle/
+.gradle/
+
+# ---- 跟具体电脑有关，不应提交 ----
+/project/local.properties
+local.properties
+
+# ---- IDE ----
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+
+# ---- 系统垃圾文件 ----
+.DS_Store
+Thumbs.db
+*.log
+
+# 注意：apk/ 目录是故意提交的，方便直接从仓库下载安装包。

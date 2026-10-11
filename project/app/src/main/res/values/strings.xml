@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">每日待办</string>
+    <string name="widget_name">今日待办</string>
+    <string name="widget_description">显示今天的待办事项</string>
+
+    <string name="empty_day">这一天没有待办</string>
+    <string name="new_task">新建待办</string>
+    <string name="menu_today">回到今天</string>
+    <string name="menu_history">历史记录</string>
+    <string name="menu_settings">设置</string>
+
+    <string name="title_new_task">新建待办</string>
+    <string name="title_edit_task">编辑待办</string>
+    <string name="hint_title">要做什么？</string>
+    <string name="hint_note">备注（可选）</string>
+
+    <string name="label_kind">完成方式</string>
+    <string name="kind_daily">每天重置</string>
+    <string name="kind_span">完成一次即结束</string>
+    <string name="kind_daily_hint">今天做完，明天重新变成未完成（例如：背单词）</string>
+    <string name="kind_span_hint">连续多天算一件事，任意一天完成即结束（例如：打扫卫生）</string>
+
+    <string name="label_start_date">开始日期</string>
+    <string name="label_end_date">结束日期</string>
+    <string name="label_rule">重复规则</string>
+    <string name="label_interval">间隔天数</string>
+    <string name="label_month_day">每月几号</string>
+    <string name="label_span_days">持续天数</string>
+    <string name="switch_infinite">无限期重复</string>
+
+    <string name="action_save">保存</string>
+    <string name="action_delete">删除</string>
+    <string name="action_edit">编辑</string>
+    <string name="action_cancel">取消</string>
+    <string name="delete_confirm">确定删除这条待办吗？它的历史记录也会一起删除。</string>
+
+    <string name="history_title">历史记录</string>
+    <string name="history_empty">还没有完成记录</string>
+    <string name="history_summary">累计完成 %1$d 次 · 有记录 %2$d 天</string>
+
+    <string name="settings_title">设置</string>
+    <string name="label_theme">主题</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+
+    <string name="label_widget_bg">小部件背景图</string>
+    <string name="action_pick_image">从相册选择图片</string>
+    <string name="action_clear_image">清除背景图</string>
+    <string name="no_bg">未设置背景图（使用默认深色背景）</string>
+    <string name="label_widget_dim">背景暗化程度</string>
+    <string name="label_widget_text">小部件文字颜色</string>
+    <string name="text_auto">自动</string>
+    <string name="text_light">浅色</string>
+    <string name="text_dark">深色</string>
+    <string name="label_widget_show_done">小部件里也显示已完成的</string>
+    <string name="action_refresh_widget">立即刷新小部件</string>
+    <string name="widget_refreshed">小部件已刷新</string>
+
+    <string name="widget_empty">今天没有待办</string>
+    <string name="widget_loading">正在载入…</string>
+    <string name="widget_more">还有 %1$d 项…</string>
+    <string name="progress_format">未完成 %1$d / 共 %2$d</string>
+    <string name="today">今天</string>
+    <string name="tomorrow">明天</string>
+    <string name="yesterday">昨天</string>
+</resources>

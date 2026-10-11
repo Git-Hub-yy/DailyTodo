@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="3dp"
+    android:layout_marginEnd="3dp"
+    android:background="@drawable/bg_day_normal"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_horizontal"
+    android:minWidth="52dp"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="6dp"
+    android:paddingEnd="6dp">
+
+    <TextView
+        android:id="@+id/textWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/chip_text"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/textDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/chip_text"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textMonthTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/chip_text"
+        android:textSize="9sp" />
+
+    <View
+        android:id="@+id/dot"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/dot_pending" />
+</LinearLayout>

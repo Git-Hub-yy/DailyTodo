@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#FF4F6BED</color>
+    <color name="chip_bg">#14000000</color>
+    <color name="chip_bg_selected">#FF4F6BED</color>
+    <color name="chip_text">#FF3C4043</color>
+    <color name="chip_text_selected">#FFFFFFFF</color>
+    <color name="dot_pending">#FF4F6BED</color>
+    <color name="widget_default_bg">#F21B1D23</color>
+</resources>

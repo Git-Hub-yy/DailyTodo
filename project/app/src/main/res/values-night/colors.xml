@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="chip_bg">#22FFFFFF</color>
+    <color name="chip_bg_selected">#FF8AA6FF</color>
+    <color name="chip_text">#FFE2E2E6</color>
+    <color name="chip_text_selected">#FF12141A</color>
+    <color name="dot_pending">#FF8AA6FF</color>
+</resources>
