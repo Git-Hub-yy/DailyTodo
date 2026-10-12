@@ -2,8 +2,12 @@ package com.daytodo.app.ui
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.content.ComponentName
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.PowerManager
+import android.provider.Settings
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -93,8 +97,65 @@ class SettingsActivity : AppCompatActivity() {
                     .show()
             }
         }
+        binding.btnAutoStart.setOnClickListener { openAutoStartSettings() }
+        binding.btnBatteryFree.setOnClickListener { requestIgnoreBatteryOptimization() }
 
         updatePreview()
+    }
+
+    /** 打开各家系统的「自启动 / 关联启动」白名单页面 */
+    private fun openAutoStartSettings() {
+        val candidates = listOf(
+            ComponentName(
+                "com.miui.securitycenter",
+                "com.miui.permcenter.autostart.AutoStartManagementActivity"
+            ),
+            ComponentName(
+                "com.huawei.systemmanager",
+                "com.huawei.systemmanager.startupmgr.ui.StartupNormalAppListActivity"
+            ),
+            ComponentName(
+                "com.coloros.safecenter",
+                "com.coloros.safecenter.permission.startup.StartupAppListActivity"
+            ),
+            ComponentName(
+                "com.vivo.permissionmanager",
+                "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"
+            ),
+            ComponentName(
+                "com.samsung.android.lool",
+                "com.samsung.android.sm.ui.battery.BatteryActivity"
+            )
+        )
+        for (component in candidates) {
+            val intent = Intent().setComponent(component)
+            if (packageManager.resolveActivity(intent, 0) != null) {
+                val ok = runCatching { startActivity(intent) }.isSuccess
+                if (ok) return
+            }
+        }
+        openAppDetails()
+    }
+
+    /** 申请「忽略电池优化」，让系统不要压制本应用的后台广播 */
+    private fun requestIgnoreBatteryOptimization() {
+        val power = getSystemService(PowerManager::class.java)
+        if (power != null && power.isIgnoringBatteryOptimizations(packageName)) {
+            Toast.makeText(this, R.string.msg_battery_already, Toast.LENGTH_SHORT).show()
+            return
+        }
+        val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+            .setData(Uri.parse("package:$packageName"))
+        val ok = runCatching { startActivity(intent) }.isSuccess
+        if (!ok) openAppDetails()
+    }
+
+    private fun openAppDetails() {
+        val intent = Intent(
+            Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+            Uri.parse("package:$packageName")
+        )
+        runCatching { startActivity(intent) }
     }
 
     private fun updatePreview() {

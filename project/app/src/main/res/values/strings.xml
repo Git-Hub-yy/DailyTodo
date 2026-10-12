@@ -57,6 +57,11 @@
     <string name="label_widget_show_done">小部件里也显示已完成的</string>
     <string name="action_refresh_widget">立即刷新小部件</string>
     <string name="widget_refreshed">小部件已刷新</string>
+    <string name="label_background">后台运行设置（重要）</string>
+    <string name="background_hint">小米、华为等系统为了省电会压制后台应用，可能导致小部件不能自动刷新（例如到了第二天还显示昨天的日期）。建议把「每日待办」加入下面的白名单。</string>
+    <string name="action_autostart">打开系统「自启动」设置</string>
+    <string name="action_battery_free">允许后台不受限制</string>
+    <string name="msg_battery_already">已经是「不受限制」状态了</string>
 
     <string name="widget_empty">今天没有待办</string>
     <string name="widget_loading">正在载入…</string>
